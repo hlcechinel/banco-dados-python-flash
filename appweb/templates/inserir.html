@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <p>Cadastro de Pessoas</p>
+
+    <form action="{{ url_for('inserir')}}" method="post">
+
+        <p>Nome:</p>
+        <BR> <input type="text" name="nome" placeholder="Nome Completo">
+        <BR> <button type="submit">Cadastrar</button>
+
+    </form>
+
+{% endblock %}

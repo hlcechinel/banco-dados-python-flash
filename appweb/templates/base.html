@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+
+
+    {% if titulo  %}
+
+        <title>{{ titulo }}</title>
+
+    {% else %}
+
+        <title>Título da página</title>
+
+    {% endif %}
+
+
+
+</head>
+<body>
+
+    <h1><a href="/">Aplicação web</a></h1>
+
+    <HR>
+
+    {% block content %} {% endblock %}
+
+
+
+</body>
+</html>

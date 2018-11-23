@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <p>Listar contatos</p>
+
+    <hr>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        {% for pessoa in lista_pessoas %}
+
+             <tr>
+                <td>{{ pessoa.idPessoa }}</td>
+                <td>{{ pessoa.nome }}</td>
+                <td><a href="/editar?id={{ pessoa.idPessoa }}">editar</a></td>
+                <td><a href="/listar?id={{ pessoa.idPessoa }}">excluir</a></td>
+             </tr>
+
+        {% endfor %}
+
+
+        </tbody>
+
+
+    </table>
+
+
+
+{% endblock %}
